@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -18,32 +20,46 @@ namespace ChallengesWithTestsMark8
 
         public double Subtract(double minuend, double subtrahend)
         {
-            throw new NotImplementedException();
+            double result = minuend - subtrahend;
+            return result;
         }
 
         public int Add(int number1, int number2)
         {
-            throw new NotImplementedException();
+            int result = number1 + number2;
+            return result;
         }
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            throw new NotImplementedException();
+            int[] smallest = { number1, number2 };
+            int result = smallest.Min();
+            return result;
         }
 
         public long Multiply(long factor1, long factor2)
         {
+            long result = factor1 * factor2;
+            return result;
             throw new NotImplementedException();
         }
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            string name = nameOfPerson;
+            if (nameOfPerson == "")
+            {
+                return "Hello!";
+            }
+            else
+            {
+                return $"Hello, {name}!";
+            }
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "HEY!";
         }
     }
 }
